@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1 class="header_text">Do you wanna Know how the paste were made?</h1>
+      </div>
+      <!-- Removed the paragraph with the Instagram link -->
+      <!-- Removed the div containing the animated image -->
+      <div class="buttons">
+        <!-- Swap the functions for Yes and No buttons -->
+        <button class="btn" id="yesButton" onmouseover="moveButton()" onclick="moveButton()">Yes</button>
+        <button class="btn" id="noButton" onclick="nextPage()">No</button>
+
+        <script>
+          function nextPage() {
+            window.location.href = "yes.html";
+          }
+
+          function moveButton() {
+            var x =
+              Math.random() *
+              (window.innerWidth -
+                document.getElementById("yesButton").offsetWidth);
+            var y =
+              Math.random() *
+              (window.innerHeight -
+                document.getElementById("yesButton").offsetHeight);
+            document.getElementById("yesButton").style.left = `${x}px`;
+            document.getElementById("yesButton").style.top = `${y}px`;
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
+
